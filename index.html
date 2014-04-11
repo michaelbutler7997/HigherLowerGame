@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+
+
+</head>
+<body>
+	 
+     
+	 
+
+
+	<div id = "Startbox"><img src = "file:///C:/Users/Michael/Downloads/big%20start%20button.jpg"/></div>
+
+	
+	
+	<script>
+	var random_number =  Math.floor(Math.random()*101)
+	
+	function get_number(){
+			
+			var return_number = prompt('Pick a number between 1 and 100');
+			console.log(random_number)
+			console.log("return numnber" + return_number)
+			
+			if(return_number == null){
+				return;
+			}
+			else if( isNaN(return_number) ){
+				alert("Not a number")
+				get_number();
+			}
+			else if (return_number < 0 || return_number > 100){
+				alert("That number was not between 100")
+				get_number();
+			}
+			else if(return_number<random_number){
+				alert("Higher")
+				get_number();
+			}
+			else if(return_number>random_number){
+				alert("Lower")
+				get_number();
+			}
+			else if(return_number==random_number){
+				alert("That was the number")
+				random_number =  Math.floor(Math.random()*101);
+			}
+	}
+	
+	jQuery('#Startbox').click(function(){
+		get_number();
+	});
+</script>
+	
+	
+</body>
+
+
+</html>
+
