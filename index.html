@@ -9,19 +9,29 @@
 </head>
 <body>
 	 
-     
+<table style = "float: right" border= 1>
+<tr>
+<td>Attempts
+</td>
+<td id = "attemptscell" >  
+</td>
+</tr>
+
+
+</table>     
 	 
 
 
-	<div id = "Startbox"><img src = "file:///C:/Users/Michael/Downloads/big%20start%20button.jpg"/></div>
+	<div id = "Startbox"><img src = "file:///C:/Users/Michael/Downloads/big%20start%20button.jpg" align : "center"/></div>
 
 	
 	
 	<script>
 	var random_number =  Math.floor(Math.random()*101)
-	
+	var attempts = 0;
 	function get_number(){
-			
+			attempts++;
+			jQuery('#attemptscell').html(attempts);
 			var return_number = prompt('Pick a number between 1 and 100');
 			console.log(random_number)
 			console.log("return numnber" + return_number)

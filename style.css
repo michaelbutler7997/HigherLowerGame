@@ -1,10 +1,11 @@
 #Startbox{
 height : 168px;
 width : 168px;
+div-align: center;
 	}
 #Returnbox{
 height : 168px;
-width : 168px;
+width : 1265px;
 background-color: orange
 
 }
